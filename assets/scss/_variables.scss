@@ -1,0 +1,36 @@
+:root {
+  --text-color: var(--color-light-grey);
+  --base-color: var(--color-ultra-grey);
+  --icon-color: var(--color-light-grey);
+  --highlight-color: var(--color-primary);
+  --notification-color: #d54e21;
+
+  // global
+  --color-body-background: var(--color-base-grey);
+  --color-link: #0073aa;
+  --color-link-focus: #1197d4;
+  --color-button: var(--highlight-color);
+  --color-button-text: var(--text-color);
+  --color-form-checked: #7e8993;
+
+  // admin menu & admin-bar
+  --menu-text: var(--text-color);
+  --menu-icon: var(--icon-color);
+  --menu-background: var(--base-color);
+  --menu-highlight-text: var(--text-color);
+  --menu-highlight-icon: var(--text-color);
+  --menu-highlight-background: var(--highlight-color);
+  --menu-current-background: var(--menu-highlight-background);
+  --menu-submenu-focus-text: var(--highlight-color);
+  --menu-submenu-current-text: var(--text-color);
+  --menu-submenu-background: var(--base-color);
+  --menu-bubble-text: var(--text-color);
+  --menu-bubble-background: var(--notification-color);
+  --menu-bubble-current-text: var(--text-color);
+  --menu-collapse-text: var(--menu-icon);
+  --menu-collapse-icon: var(--menu-icon);
+  --menu-collapse-focus-text: var(--text-color);
+  --menu-collapse-focus-icon: var(--menu-highlight-icon);
+  --adminbar-recovery-exit-text: var(--menu-bubble-text);
+  --adminbar-recovery-exit-background: var(--menu-bubble-background);
+}

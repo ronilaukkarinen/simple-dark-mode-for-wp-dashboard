@@ -1,0 +1,15 @@
+.wp-core-ui {
+  .SimpleHistoryLogitems__pagination,
+  .SimpleHistoryLogitems__pagination div,
+  .SimpleHistoryLogitem--loglevel-info {
+    background-color: var(--color-dark-grey) !important;
+  }
+
+  .SimpleHistoryLogitem__text {
+    color: var(--color-light-grey);
+  }
+
+  .SimpleHistoryLogitem::before {
+    background-color: rgb(255 255 255 / .1) !important;
+  }
+}

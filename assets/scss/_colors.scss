@@ -1,0 +1,31 @@
+// The colors below are loosely based on the WordPress branding colours.
+// @link https://make.wordpress.org/design/handbook/design-guide/foundations/colors/
+:root {
+  --color-white: #fff;
+  --color-black: #000;
+  --color-blue: #2271b1;
+  --color-medium-blue: #00a0d2;
+  --color-clear: transparent;
+  --color-accent-red: #dc3232;
+  --color-accent-orange: #f56e28;
+  --color-accent-yellow: #ffb900;
+  --color-accent-green: #46b450;
+  --color-accent-blue: var(--color-blue);
+  --color-accent-purple: #826eb4;
+  --color-base-grey: #14171d;
+  --color-light-grey: #bbc8d4;
+  --color-heavy-grey: #191d24;
+  --color-dark-grey: #191d24;
+  --color-ultra-grey: #050608;
+  --color-dark-silver: #50626f;
+  --color-base-blue: #2e74aa;
+  --color-light-blue: #4092d2;
+  --color-dark-blue: #2c5f88;
+  --color-ultra-blue: #1f3f58;
+  --color-bright-blue: #30ceff;
+  --color-editor-lavender: #c678dd;
+  --color-editor-sunglo: #e06c75;
+  --color-editor-olivine: #98c379;
+  --color-primary: var(--color-blue);
+  --color-secondary: var(--color-dark-silver);
+}
