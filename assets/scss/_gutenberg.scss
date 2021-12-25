@@ -65,6 +65,12 @@ body.wp-admin .editor-styles-wrapper,
   }
 }
 
+.wp-admin .block-editor-block-toolbar {
+  border-bottom: 1px solid var(--color-border-light);
+  border-left: 1px solid var(--color-border-light);
+  border-top: 1px solid var(--color-border-light);
+}
+
 // Gutenberg editor dark theme
 // stylelint-disable
 .interface-interface-skeleton__footer .block-editor-block-breadcrumb,
@@ -370,4 +376,9 @@ html.wp-toolbar:root .postbox-header,
 #wpfooter .menu-in-location,
 #wpfooter .theme-location-set {
   color: var(--color-paragraph) !important;
+}
+
+.components-notice__dismiss,
+.components-notice__action {
+  color: #14171d !important;
 }
