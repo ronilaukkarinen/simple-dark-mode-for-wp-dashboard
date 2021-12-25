@@ -1,17 +1,17 @@
+// stylelint-disable selector-id-pattern, selector-max-specificity, declaration-no-important
 body.wp-admin:not(.gutenberg-editor-page) {
   color: var(--color-light-grey);
 
   #adminmenu .awaiting-mod,
   #adminmenu .update-plugins,
   #wpadminbar .wp-ui-notification {
-    background: var(--color-primary);
     background-color: var(--color-primary);
   }
 
   #wpbody,
   #wpfooter {
     background-color: var(--color-base-grey);
-    color: var(--color-light-grey);
+    color: var(--color-paragraph);
 
     p,
     code,
@@ -24,71 +24,71 @@ body.wp-admin:not(.gutenberg-editor-page) {
     .importer-title,
     .menu-in-location,
     .theme-location-set {
-      color: var(--color-light-grey);
+      color: var(--color-paragraph);
     }
 
     #wpbody-content {
       background-color: var(--color-base-grey);
     }
 
-    #wpadminbar {
-      * {
-        color: inherit !important;
-      }
+    #wpadminbar * {
+      // stylelint-disable-next-line
+      color: inherit !important;
     }
 
     table {
-      background-color: var(--color-ultra-grey);
-      border-color: var(--color-dark-grey);
+      background-color: var(--color-dark-grey);
+      border-color: var(--color-border-light);
 
       p {
-        color: var(--color-light-grey);
+        color: var(--color-paragraph);
       }
 
       tr {
-        background-color: var(--color-base-grey);
+        background-color: var(--color-dark-grey);
 
         th,
         td {
-          background-color: transparent;
-          color: var(--color-light-grey);
+          background-color: var(--color-dark-grey);
+          color: var(--color-paragraph);
         }
       }
 
       &.widefat {
-        border-color: var(--color-dark-grey);
+        background-color: var(--color-dark-grey);
+        border-color: var(--color-border-light);
 
         thead,
         tfoot {
+          background-color: var(--color-dark-grey);
+
           th,
           td {
+            // stylelint-disable-next-line
+            background-color: var(--color-dark-grey) !important;
             border-bottom-color: var(--color-base-grey);
             border-top-color: var(--color-ultra-grey);
-            color: var(--color-light-grey);
+            color: var(--color-paragraph);
           }
         }
 
         p {
-          color: var(--color-light-grey);
+          color: var(--color-paragraph);
         }
       }
 
-      &.striped {
-        tbody {
-          tr {
-            background-color: var(--color-dark-grey);
+      &.striped tbody tr {
+        background-color: var(--color-dark-grey);
 
-            &:nth-child(odd) {
-              background-color: var(--color-base-grey);
-            }
-          }
+        &:nth-child(odd) {
+          background-color: var(--color-base-grey);
         }
       }
 
       &.plugins {
         .active td,
         .active th {
-          background-color: var(--color-ultra-grey);
+          background-color: var(--color-charade);
         }
 
         tr.active + tr.inactive td,
@@ -107,15 +107,15 @@ body.wp-admin:not(.gutenberg-editor-page) {
       &.wp-list-table {
         tr {
           background-color: var(--color-dark-grey);
+        }
 
-          th,
-          td {
-            color: var(--color-light-grey);
+        tr th,
+        tr td {
+          color: var(--color-paragraph);
 
-            *::before,
-            *::after {
-              color: var(--color-light-grey);
-            }
+          *::before,
+          *::after {
+            color: var(--color-paragraph);
           }
         }
       }
@@ -130,37 +130,17 @@ body.wp-admin:not(.gutenberg-editor-page) {
     .tablenav {
       p,
       span {
-        color: var(--color-light-grey);
-      }
-    }
-
-    .subsubsub,
-    .subsubsub li {
-      color: var(--color-light-grey);
-
-      a {
-        color: var(--color-bright-blue);
-
-        span.count,
-        &.current span.count {
-          color: var(--color-light-grey);
-        }
+        color: var(--color-paragraph);
       }
 
-      a.current {
-        color: var(--color-white);
-      }
-    }
-
-    .tablenav {
       .tablenav-pages-navspan {
-        background: var(--color-base-grey);
-        border-color: var(--color-ultra-grey);
-        color: var(--color-light-grey);
+        background-color: var(--color-base-grey);
+        border-color: var(--color-border-light);
+        color: var(--color-paragraph);
       }
 
       .tablenav-pages a {
-        background: var(--color-dark-silver);
+        background-color: var(--color-dark-silver);
         border: 1px solid var(--color-base-grey);
 
         span {
@@ -169,9 +149,27 @@ body.wp-admin:not(.gutenberg-editor-page) {
 
         &:hover,
         &:focus {
-          background: var(--color-medium-blue);
-          border-color: var(--color-base-grey);
+          background-color: var(--color-medium-blue);
+          border-color: var(--color-border-light);
         }
+      }
+    }
+
+    .subsubsub,
+    .subsubsub li {
+      color: var(--color-paragraph);
+
+      a {
+        color: var(--color-bright-blue);
+
+        span.count,
+        &.current span.count {
+          color: var(--color-paragraph);
+        }
+      }
+
+      a.current {
+        color: var(--color-white);
       }
     }
 
@@ -179,7 +177,7 @@ body.wp-admin:not(.gutenberg-editor-page) {
     .error,
     .updated,
     .update-nag {
-      background-color: var(--color-ultra-grey);
+      background-color: var(--color-charade);
     }
 
     .notice p,
@@ -240,11 +238,11 @@ body.wp-admin:not(.gutenberg-editor-page) {
     .upload-plugin .install-help,
     .upload-theme .install-help,
     .subtitle {
-      color: var(--color-light-grey);
+      color: var(--color-paragraph);
     }
 
     .try-gutenberg-panel-content hr {
-      border-color: var(--color-ultra-grey);
+      border-color: var(--color-border-light);
     }
 
     .spinner {
@@ -265,27 +263,25 @@ body.wp-admin:not(.gutenberg-editor-page) {
 
     #activity-widget #the-comment-list .comment,
     #activity-widget #the-comment-list .pingback {
-      box-shadow: inset 0 1px 0 rgb(35 41 47);
       box-shadow: inset 0 1px 0 rgb(35 40 46);
     }
 
     #templateside {
       > ul {
         background-color: var(--color-base-grey);
-        border-color: var(--color-dark-grey);
+        border-color: var(--color-border-light);
 
-        li {
-          a,
-          span {
-            background-color: var(--color-clear);
+        li a,
+        li span {
+          background-color: var(--color-clear);
 
-            &.hover,
-            &:hover,
-            &.hover,
-            &:focus {
-              background-color: var(--color-dark-grey);
-              color: var(--color-light-grey);
-            }
+          // stylelint-disable-next-line
+          &.hover,
+          &:hover,
+          &.hover,
+          &:focus {
+            background-color: var(--color-dark-grey);
+            color: var(--color-paragraph);
           }
         }
       }
@@ -303,7 +299,7 @@ body.wp-admin:not(.gutenberg-editor-page) {
     .media-widget-preview.media_image,
     .media-upload-form .media-item {
       background-color: var(--color-dark-grey);
-      border-color: var(--color-ultra-grey);
+      border-color: var(--color-border-light);
     }
 
     #show-settings-link,
@@ -313,21 +309,21 @@ body.wp-admin:not(.gutenberg-editor-page) {
 
     #contextual-help-link-wrap,
     #screen-options-link-wrap {
-      color: var(--color-light-grey);
+      color: var(--color-paragraph);
 
       button {
         background-color: var(--color-dark-grey);
-        border-color: var(--color-ultra-grey);
-        color: var(--color-light-grey);
+        border-color: var(--color-border-light);
+        color: var(--color-paragraph);
 
         &::after {
-          color: var(--color-light-grey);
+          color: var(--color-paragraph);
         }
 
         &:hover,
         &:focus {
           background-color: var(--color-dark-grey);
-          border-color: var(--color-ultra-grey);
+          border-color: var(--color-border-light);
           color: var(--color-white);
 
           &::after {
@@ -342,12 +338,12 @@ body.wp-admin:not(.gutenberg-editor-page) {
     #plugin-information-content,
     .notification-dialog {
       background-color: var(--color-base-grey);
-      border-color: var(--color-ultra-grey);
+      border-color: var(--color-border-light);
     }
 
     .widgets-holder-wrap {
       background-color: var(--color-base-grey);
-      border-color: var(--color-clear);
+      border-color: var(--color-border-light);
 
       .sidebar-name {
         &:hover,
@@ -371,13 +367,13 @@ body.wp-admin:not(.gutenberg-editor-page) {
         .widget-top {
           &:hover,
           &:focus {
-            border-color: var(--color-dark-grey);
+            border-color: var(--color-border-light);
           }
 
           .widget-control-edit {
             background-color: var(--color-dark-grey);
             border-left-color: var(--color-clear);
-            color: var(--color-light-grey);
+            color: var(--color-paragraph);
 
             &:hover,
             &:focus {
@@ -389,13 +385,14 @@ body.wp-admin:not(.gutenberg-editor-page) {
         }
 
         ul.widgets-chooser-sidebars {
-          border-color: var(--color-ultra-grey);
+          border-color: var(--color-border-light);
 
           li {
             background-color: var(--color-dark-grey);
-            border-color: var(--color-base-grey);
-            color: var(--color-light-grey);
+            border-color: var(--color-border-light);
+            color: var(--color-paragraph);
 
+            // stylelint-disable-next-line
             &.widgets-chooser-selected {
               background-color: var(--color-accent-blue);
               color: var(--color-white);
@@ -414,8 +411,8 @@ body.wp-admin:not(.gutenberg-editor-page) {
     .contextual-help-tabs {
       .active a {
         background-color: var(--color-base-grey);
-        border-color: var(--color-dark-grey);
-        color: var(--color-light-grey);
+        border-color: var(--color-border-light);
+        color: var(--color-paragraph);
       }
 
       a:hover,
@@ -431,7 +428,7 @@ body.wp-admin:not(.gutenberg-editor-page) {
     #screen-options-wrap h5,
     #screen-options-wrap legend,
     #screen-meta-links .show-settings {
-      color: var(--color-light-grey);
+      color: var(--color-paragraph);
 
       &:hover,
       &:focus {
@@ -454,19 +451,19 @@ body.wp-admin:not(.gutenberg-editor-page) {
     .wp-filter,
     .menu-edit #post-body {
       background-color: var(--color-dark-grey);
-      border-color: var(--color-ultra-grey);
-      color: var(--color-light-grey);
+      border-color: var(--color-border-light);
+      color: var(--color-paragraph);
 
       p,
       span {
-        color: var(--color-light-grey);
+        color: var(--color-paragraph);
       }
     }
 
     .menu-edit {
       #nav-menu-header,
       #nav-menu-footer {
-        background: var(--color-ultra-grey);
+        background-color: var(--color-ultra-grey);
       }
     }
 
@@ -490,29 +487,23 @@ body.wp-admin:not(.gutenberg-editor-page) {
     .community-events li ~ li,
     .community-events-footer,
     .community-events .activity-block.last {
-      border-color: var(--color-base-grey);
+      border-color: var(--color-border-light);
     }
 
     .pressthis-bookmarklet span {
       color: var(--color-base-grey);
     }
 
-    .color-option.selected,
     .color-option:hover,
     .accordion-section-content,
-    .filter-drawer,
-    .wp-filter .favorites-form,
-    .filter-group,
-    .filtered-by .tag,
     .color-option.selected,
     .color-option:focus,
-    .accordion-section-content,
     .filter-drawer,
     .wp-filter .favorites-form,
     .filter-group,
     .filtered-by .tag {
       background-color: var(--color-dark-grey);
-      border-color: var(--color-ultra-grey);
+      border-color: var(--color-border-light);
     }
 
     .plugin-card {
@@ -520,7 +511,7 @@ body.wp-admin:not(.gutenberg-editor-page) {
 
       p,
       .column-compatibility span::before {
-        color: var(--color-light-grey);
+        color: var(--color-paragraph);
       }
     }
 
@@ -530,7 +521,7 @@ body.wp-admin:not(.gutenberg-editor-page) {
     #the-comment-list .unapproved th,
     #the-comment-list div.undo,
     #the-comment-list tr.undo {
-      background-color: var(--color-ultra-grey);
+      background-color: var(--color-charade);
     }
 
     .plugin-card,
@@ -538,13 +529,13 @@ body.wp-admin:not(.gutenberg-editor-page) {
     #nav-menu-header,
     #menu-management .menu-edit,
     .wp-editor-container {
-      border-color: var(--color-ultra-grey);
+      border-color: var(--color-border-light);
     }
 
     .wp-filter .button.drawer-toggle {
       &,
       &::before {
-        color: var(--color-light-grey);
+        color: var(--color-paragraph);
       }
 
       &:hover,
@@ -558,12 +549,12 @@ body.wp-admin:not(.gutenberg-editor-page) {
     }
 
     .filter-links li a {
-      border-color: var(--color-dark-grey);
-      color: var(--color-light-grey);
+      border-color: var(--color-border-light);
+      color: var(--color-paragraph);
 
       &.current {
-        border-color: var(--color-light-grey);
-        color: var(--color-light-grey);
+        border-color: var(--color-border-light);
+        color: var(--color-paragraph);
       }
     }
 
@@ -574,8 +565,8 @@ body.wp-admin:not(.gutenberg-editor-page) {
     &.js .control-section.open .accordion-section-title,
     &.js .control-section:hover .accordion-section-title {
       background-color: var(--color-ultra-grey);
-      border-color: var(--color-base-grey);
-      color: var(--color-light-grey);
+      border-color: var(--color-border-light);
+      color: var(--color-paragraph);
     }
 
     #dashboard_right_now .sub,
@@ -588,32 +579,16 @@ body.wp-admin:not(.gutenberg-editor-page) {
     .taxonomydiv div.tabs-panel,
     .wp-tab-panel {
       background-color: var(--color-base-grey);
-      border-color: var(--color-dark-grey);
+      border-color: var(--color-border-light);
     }
 
     .wp-editor-expand #wp-content-editor-tools,
     #wp-content-editor-tools {
       background-color: var(--color-base-grey);
-      border-color: var(--color-dark-grey);
+      border-color: var(--color-border-light);
     }
 
-    .accordion-section,
     .accordion-section.open:hover,
-    #menu-management .menu-edit,
-    #menu-settings-column .accordion-container,
-    .comment-ays,
-    .feature-filter,
-    .imgedit-group,
-    .manage-menus,
-    .menu-item-handle,
-    .popular-tags,
-    .stuffbox,
-    .widget-inside,
-    .widget-top,
-    p.popular-tags,
-    .postbox .hndle,
-    .stuffbox .hndle,
-    .widgets-chooser ul,
     .accordion-section,
     .accordion-section.open:focus,
     #menu-management .menu-edit,
@@ -631,15 +606,15 @@ body.wp-admin:not(.gutenberg-editor-page) {
     .postbox .hndle,
     .stuffbox .hndle,
     .widgets-chooser ul {
-      border-color: var(--color-base-grey);
+      border-color: var(--color-border-light);
     }
 
     #major-publishing-actions,
     .menu-item-settings,
     .link-to-original,
     &.nav-menus-php #post-body {
-      background: var(--color-dark-grey);
-      border-color: var(--color-base-grey);
+      background-color: var(--color-dark-grey);
+      border-color: var(--color-border-light);
     }
 
     .accordion-section-title:hover::after,
@@ -660,34 +635,32 @@ body.wp-admin:not(.gutenberg-editor-page) {
     .widget-inside,
     .manage-menus,
     #menu-management {
-      background: var(--color-ultra-grey);
-      border-color: var(--color-dark-grey);
+      background-color: var(--color-ultra-grey);
+      border-color: var(--color-border-light);
     }
 
     .menu-item-bar .menu-item-handle {
-      &,
       &:hover,
-      &,
       &:focus {
-        border-color: var(--color-base-grey);
+        border-color: var(--color-border-light);
       }
     }
 
     .wp-editor-container,
     .wp-editor-expand #post-status-info {
-      border-color: var(--color-dark-grey);
+      border-color: var(--color-border-light);
     }
 
     .nav-tab-wrapper,
     .wrap h2.nav-tab-wrapper,
     h1.nav-tab-wrapper {
-      border-color: var(--color-light-grey);
+      border-color: var(--color-border-light);
     }
 
     .nav-tab {
       background-color: var(--color-dark-grey);
-      border-color: var(--color-ultra-grey);
-      color: var(--color-light-grey);
+      border-color: var(--color-border-light);
+      color: var(--color-paragraph);
 
       &:focus,
       &:hover {
@@ -703,58 +676,58 @@ body.wp-admin:not(.gutenberg-editor-page) {
     .media-modal-content {
       background-color: var(--color-ultra-grey);
       border-bottom: var(--color-light-grey);
-      border-color: var(--color-ultra-grey);
-      color: var(--color-light-grey);
+      border-color: var(--color-border-light);
+      color: var(--color-paragraph);
     }
 
     .media-frame-content,
     .edit-attachment-frame .attachment-info {
       background-color: var(--color-base-grey);
-      border-color: var(--color-dark-grey);
-      color: var(--color-light-grey);
+      border-color: var(--color-border-light);
+      color: var(--color-paragraph);
     }
 
     .edit-attachment-frame .edit-media-header .left,
     .edit-attachment-frame .edit-media-header .right,
     &.upload-php .media-modal-close {
-      border-color: var(--color-base-grey);
+      border-color: var(--color-border-light);
     }
 
     #template textarea {
-      background: var(--color-black);
+      background-color: var(--color-black);
       border-color: var(--color-black);
-      color: var(--color-light-grey);
+      color: var(--color-paragraph);
     }
 
     #templateside .highlight {
-      background: var(--color-dark-grey);
-      color: var(--color-light-grey);
+      background-color: var(--color-dark-grey);
+      color: var(--color-paragraph);
     }
 
     .theme-overlay {
       .theme-backdrop,
       .theme-wrap {
-        background: var(--color-base-grey);
+        background-color: var(--color-base-grey);
       }
 
       .screenshot {
-        border-color: var(--color-ultra-grey);
+        border-color: var(--color-border-light);
       }
 
       .current-label {
-        background: var(--color-dark-grey);
+        background-color: var(--color-dark-grey);
       }
 
       .theme-name,
       .theme-version,
       .theme-author,
       .theme-description {
-        color: var(--color-light-grey);
+        color: var(--color-paragraph);
       }
 
       .theme-tags {
-        border-color: var(--color-ultra-grey);
-        color: var(--color-light-grey);
+        border-color: var(--color-border-light);
+        color: var(--color-paragraph);
 
         span {
           color: var(--color-white);
@@ -766,10 +739,10 @@ body.wp-admin:not(.gutenberg-editor-page) {
         .close,
         .left,
         .right {
-          border-color: var(--color-ultra-grey);
+          border-color: var(--color-border-light);
 
           &::before {
-            color: var(--color-light-grey);
+            color: var(--color-paragraph);
           }
 
           &:hover,
@@ -779,22 +752,20 @@ body.wp-admin:not(.gutenberg-editor-page) {
             }
           }
 
-          &.disabled {
-            &::before {
-              color: var(--color-light-grey);
-            }
+          &.disabled::before {
+            color: var(--color-paragraph);
           }
         }
       }
 
       .theme-actions {
         background-color: var(--color-dark-grey);
-        border-color: var(--color-ultra-grey);
+        border-color: var(--color-border-light);
       }
     }
 
     .theme-browser .theme {
-      border-color: var(--color-ultra-grey);
+      border-color: var(--color-border-light);
 
       &.active .theme-name,
       &.add-new-theme a:focus,
@@ -816,48 +787,48 @@ body.wp-admin:not(.gutenberg-editor-page) {
     }
 
     .health-check-accordion {
-      border-color: var(--color-ultra-grey);
+      border-color: var(--color-border-light);
     }
 
     .health-check-header,
     .health-check-accordion-panel {
-      background: var(--color-ultra-grey);
+      background-color: var(--color-ultra-grey);
     }
 
     .health-check-accordion-trigger {
-      background: var(--color-ultra-grey);
-      color: var(--color-light-grey);
+      background-color: var(--color-ultra-grey);
+      color: var(--color-paragraph);
 
       .badge {
-        color: var(--color-light-grey);
+        color: var(--color-paragraph);
       }
     }
   }
 
   .site-health-view-passed {
     .icon {
-      border-color: var(--color-light-grey);
-      color: var(--color-light-grey);
+      border-color: var(--color-border-light);
+      color: var(--color-paragraph);
     }
   }
 
   #wp-link {
     h1 {
       background-color: var(--color-base-grey);
-      border-color: var(--color-ultra-grey);
-      color: var(--color-light-grey);
+      border-color: var(--color-border-light);
+      color: var(--color-paragraph);
     }
 
     #link-selector {
       background-color: var(--color-dark-grey);
 
       .howto {
-        color: var(--color-light-grey);
+        color: var(--color-paragraph);
       }
 
       .query-results {
         background-color: var(--color-dark-grey);
-        border-color: var(--color-ultra-grey);
+        border-color: var(--color-border-light);
       }
 
       .query-notice {
@@ -873,11 +844,11 @@ body.wp-admin:not(.gutenberg-editor-page) {
       ul {
         li {
           background-color: var(--color-dark-grey);
-          border-color: var(--color-ultra-grey);
-          color: var(--color-light-grey);
+          border-color: var(--color-border-light);
+          color: var(--color-paragraph);
 
           span {
-            color: var(--color-light-grey);
+            color: var(--color-paragraph);
           }
 
           &.selected,
@@ -892,7 +863,7 @@ body.wp-admin:not(.gutenberg-editor-page) {
 
     .submitbox {
       background-color: var(--color-base-grey);
-      border-color: var(--color-ultra-grey);
+      border-color: var(--color-border-light);
     }
   }
 
@@ -922,14 +893,14 @@ body.wp-admin:not(.gutenberg-editor-page) {
   &.wp-customizer {
     #screen-options-wrap {
       background-color: var(--color-ultra-grey);
-      border-color: var(--color-base-grey);
+      border-color: var(--color-border-light);
     }
 
     .menu-item-settings,
     .menu-item-bar .menu-item-handle {
       background-color: var(--color-base-grey);
-      border-color: var(--color-ultra-grey);
-      color: var(--color-light-grey);
+      border-color: var(--color-border-light);
+      color: var(--color-paragraph);
     }
   }
 
@@ -937,13 +908,13 @@ body.wp-admin:not(.gutenberg-editor-page) {
     &-scrollable {
       #plugin-information-tabs {
         background-color: var(--color-ultra-grey);
-        border-color: var(--color-dark-grey);
+        border-color: var(--color-border-light);
 
         a.current {
           background-color: var(--color-base-grey);
-          border-color: var(--color-dark-grey);
+          border-color: var(--color-border-light);
           border-bottom-color: var(--color-base-grey);
-          color: var(--color-light-grey);
+          color: var(--color-paragraph);
         }
       }
 
@@ -955,12 +926,12 @@ body.wp-admin:not(.gutenberg-editor-page) {
         }
 
         .fyi {
-          background: var(--color-ultra-grey);
-          border-color: var(--color-dark-grey);
-          color: var(--color-light-grey);
+          background-color: var(--color-ultra-grey);
+          border-color: var(--color-border-light);
+          color: var(--color-paragraph);
 
           .counter-back {
-            background: var(--color-light-grey);
+            background-color: var(--color-light-grey);
           }
 
           h3,
@@ -972,20 +943,16 @@ body.wp-admin:not(.gutenberg-editor-page) {
     }
 
     &-footer {
-      background: var(--color-ultra-grey) !important;
+      background-color: var(--color-ultra-grey) !important;
       border-color: var(--color-dark-grey) !important;
     }
   }
 
   #customize-controls {
-    border-color: var(--color-base-grey);
+    border-color: var(--color-border-light);
 
     .cannot-expand:hover .accordion-section-title,
     .panel-meta.customize-info .accordion-section-title:hover,
-    .customize-info .customize-panel-description,
-    .customize-info .customize-section-description,
-    .no-widget-areas-rendered-notice,
-    #customize-outer-theme-controls .customize-info .customize-section-description,
     .cannot-expand:focus .accordion-section-title,
     .panel-meta.customize-info .accordion-section-title:focus,
     .customize-info .customize-panel-description,
@@ -993,31 +960,37 @@ body.wp-admin:not(.gutenberg-editor-page) {
     .no-widget-areas-rendered-notice,
     #customize-outer-theme-controls .customize-info .customize-section-description {
       background-color: var(--color-base-grey);
-      border-color: var(--color-ultra-grey);
-      color: var(--color-light-grey);
+      border-color: var(--color-border-light);
+      color: var(--color-paragraph);
     }
 
     .control-section .accordion-section-title:focus .menu-in-location,
     .control-section .accordion-section-title:hover .menu-in-location,
     .theme-location-set {
-      color: var(--color-light-grey);
+      color: var(--color-paragraph);
     }
 
     #customize-sidebar-outer-content {
-      border-color: var(--color-dark-grey);
+      border-color: var(--color-border-light);
     }
 
     .customize-panel-back,
     .customize-section-back {
       background-color: var(--color-base-grey);
       border-color: transparent;
-      color: var(--color-light-grey);
+      color: var(--color-paragraph);
     }
 
     #customize-theme-controls {
+      .control-panel-themes > .accordion-section-title {
+        background-color: var(--color-base-grey);
+        border-color: var(--color-border-light);
+        color: var(--color-paragraph);
+      }
+
       .accordion-section-content,
       .description {
-        color: var(--color-light-grey);
+        color: var(--color-paragraph);
       }
 
       .control-panel-content:not(.control-panel-nav_menus) .control-section:nth-child(2),
@@ -1027,7 +1000,7 @@ body.wp-admin:not(.gutenberg-editor-page) {
       .control-section:last-of-type.open,
       .control-section:last-of-type > .accordion-section-title,
       .control-section.open {
-        border-color: var(--color-ultra-grey);
+        border-color: var(--color-border-light);
       }
     }
 
@@ -1036,19 +1009,19 @@ body.wp-admin:not(.gutenberg-editor-page) {
     .control-section.open .accordion-section-title,
     .control-section:hover > .accordion-section-title {
       background-color: var(--color-ultra-grey);
-      border-color: var(--color-dark-grey);
-      color: var(--color-light-grey);
+      border-color: var(--color-border-light);
+      color: var(--color-paragraph);
 
       &::after {
-        color: var(--color-light-grey);
+        color: var(--color-paragraph);
       }
     }
 
     .accordion-section-title,
     .customize-section-title {
       background-color: var(--color-base-grey);
-      border-color: var(--color-ultra-grey);
-      color: var(--color-light-grey);
+      border-color: var(--color-border-light);
+      color: var(--color-paragraph);
 
       &:hover,
       &:focus {
@@ -1056,44 +1029,36 @@ body.wp-admin:not(.gutenberg-editor-page) {
       }
 
       h3 {
-        color: var(--color-light-grey);
+        color: var(--color-paragraph);
       }
     }
 
     .customize-info {
-      border-color: var(--color-dark-grey);
+      border-color: var(--color-border-light);
 
       .customize-help-toggle {
-        color: var(--color-light-grey);
+        color: var(--color-paragraph);
       }
 
       .accordion-section-title,
       .customize-panel-description {
         background-color: var(--color-base-grey);
-        border-color: var(--color-dark-grey);
-        color: var(--color-light-grey);
-      }
-    }
-
-    #customize-theme-controls {
-      .control-panel-themes > .accordion-section-title {
-        background-color: var(--color-base-grey);
-        border-color: var(--color-ultra-grey);
-        color: var(--color-light-grey);
+        border-color: var(--color-border-light);
+        color: var(--color-paragraph);
       }
     }
 
     #customize-header-actions,
     .customize-controls-close {
       background-color: var(--color-base-grey);
-      border-color: var(--color-base-grey);
-      color: var(--color-light-grey);
+      border-color: var(--color-border-light);
+      color: var(--color-paragraph);
     }
 
     .wp-full-overlay-footer {
       background-color: var(--color-ultra-grey);
-      border-color: var(--color-base-grey);
-      color: var(--color-light-grey);
+      border-color: var(--color-border-light);
+      color: var(--color-paragraph);
 
       .devices {
         box-shadow: none;
@@ -1102,7 +1067,7 @@ body.wp-admin:not(.gutenberg-editor-page) {
 
     .customize-controls-close {
       border-color: transparent;
-      color: var(--color-light-grey);
+      color: var(--color-paragraph);
 
       &:hover,
       &:focus {
@@ -1122,7 +1087,7 @@ body.wp-admin:not(.gutenberg-editor-page) {
 
     .collapse-sidebar {
       span {
-        color: var(--color-light-grey);
+        color: var(--color-paragraph);
       }
     }
   }
@@ -1130,12 +1095,12 @@ body.wp-admin:not(.gutenberg-editor-page) {
   .media-modal {
     button.media-modal-close {
       background-color: var(--color-base-grey);
-      border-color: var(--color-base-grey);
+      border-color: var(--color-border-light);
 
       &:hover,
       &:focus {
         background-color: var(--color-dark-silver);
-        border-color: var(--color-dark-silver);
+        border-color: var(--color-border-light);
 
         span {
           &::before {
@@ -1146,14 +1111,14 @@ body.wp-admin:not(.gutenberg-editor-page) {
 
       span {
         &::before {
-          color: var(--color-light-grey);
+          color: var(--color-paragraph);
         }
       }
     }
 
     .media-menu {
-      background: var(--color-ultra-grey);
-      border-color: var(--color-ultra-grey);
+      background-color: var(--color-ultra-grey);
+      border-color: var(--color-border-light);
 
       a {
         color: var(--color-primary);
@@ -1165,12 +1130,11 @@ body.wp-admin:not(.gutenberg-editor-page) {
       }
 
       .separator {
-        border-color: var(--color-dark-silver);
+        border-color: var(--color-border-light);
       }
 
       .active,
       .active:hover,
-      .active,
       .active:focus {
         color: var(--color-white);
       }
@@ -1187,19 +1151,19 @@ body.wp-admin:not(.gutenberg-editor-page) {
       }
 
       .active {
-        background: var(--color-base-grey);
-        border-color: var(--color-ultra-grey);
+        background-color: var(--color-base-grey);
+        border-color: var(--color-border-light);
         color: var(--color-white);
       }
     }
 
     .media-sidebar {
-      background: var(--color-ultra-grey);
+      background-color: var(--color-ultra-grey);
       border-color: var(--color-white);
       border-left-color: var(--color-ultra-grey);
 
       .setting span {
-        color: var(--color-light-grey);
+        color: var(--color-paragraph);
       }
 
       h2 {
@@ -1210,7 +1174,7 @@ body.wp-admin:not(.gutenberg-editor-page) {
         border-color: var(--color-white);
 
         .details {
-          color: var(--color-light-grey);
+          color: var(--color-paragraph);
         }
 
         .filename {
@@ -1227,46 +1191,40 @@ body.wp-admin:not(.gutenberg-editor-page) {
 
     &-content {
       background-color: var(--color-base-grey);
-      border-color: var(--color-ultra-grey);
+      border-color: var(--color-border-light);
 
       .media-frame {
         &-title,
         &-content {
           background-color: var(--color-base-grey);
-          border-color: var(--color-ultra-grey);
-          color: var(--color-light-grey);
+          border-color: var(--color-border-light);
+          color: var(--color-paragraph);
 
           h1 {
-            color: var(--color-light-grey);
+            color: var(--color-paragraph);
           }
         }
 
         &-content {
-          .setting {
-            span {
-              color: var(--color-light-grey);
-            }
+          .setting span {
+            color: var(--color-paragraph);
           }
 
-          .upload-ui {
-            h2,
-            p {
-              color: var(--color-light-grey);
-            }
+          .upload-ui h2,
+          .upload-ui p {
+            color: var(--color-paragraph);
           }
         }
 
         &-toolbar {
           .media-toolbar {
-            border-color: var(--color-ultra-grey);
+            border-color: var(--color-border-light);
           }
         }
 
-        &.hide-router {
-          .media-frame {
-            &-title {
-              border-bottom: none;
-            }
+        &.hide-router .media-frame {
+          &-title {
+            border-bottom: none;
           }
         }
       }
@@ -1274,7 +1232,7 @@ body.wp-admin:not(.gutenberg-editor-page) {
       .imgedit-wrap {
         .imgedit-settings {
           background-color: var(--color-ultra-grey);
-          border-color: var(--color-dark-silver);
+          border-color: var(--color-border-light);
 
           h2 {
             color: var(--color-white);
@@ -1289,7 +1247,7 @@ body.wp-admin:not(.gutenberg-editor-page) {
           background-color: var(--color-ultra-grey);
 
           &::before {
-            color: var(--color-light-grey);
+            color: var(--color-paragraph);
           }
         }
       }
@@ -1303,18 +1261,18 @@ body.wp-admin:not(.gutenberg-editor-page) {
           .left,
           .right {
             background-color: var(--color-ultra-grey);
-            border-color: var(--color-dark-silver);
+            border-color: var(--color-border-light);
           }
         }
 
         .attachment-info {
           background-color: var(--color-ultra-grey);
-          border-color: var(--color-dark-silver);
-          color: var(--color-light-grey);
+          border-color: var(--color-border-light);
+          color: var(--color-paragraph);
 
           span,
           .filename {
-            color: var(--color-light-grey);
+            color: var(--color-paragraph);
           }
         }
       }
@@ -1322,7 +1280,7 @@ body.wp-admin:not(.gutenberg-editor-page) {
 
     .wp-core-ui {
       .attachment-preview {
-        background: var(--color-heavy-grey);
+        background-color: var(--color-heavy-grey);
         box-shadow: inset 0 0 15px rgb(0 0 0 / .2), inset 0 0 0 1px rgb(0 0 0 / .05);
       }
 
@@ -1337,13 +1295,13 @@ body.wp-admin:not(.gutenberg-editor-page) {
     }
 
     .embed-url {
-      background: var(--color-dark-silver);
+      background-color: var(--color-dark-silver);
     }
   }
 
   #file-editor-warning {
     background-color: var(--color-base-grey);
-    color: var(--color-light-grey);
+    color: var(--color-paragraph);
   }
 
   #adminmenu a.wp-has-current-submenu::after,
@@ -1354,21 +1312,21 @@ body.wp-admin:not(.gutenberg-editor-page) {
   .notice,
   .error,
   .updated {
-    background-color: var(--color-ultra-grey);
-    border-color: var(--color-ultra-grey);
+    background-color: var(--color-charade);
+    border-color: var(--color-border-light);
   }
 
   .wp-editor-tabs {
     button {
       background-color: var(--color-dark-silver);
       border-bottom: none;
-      border-color: var(--color-ultra-grey);
-      color: var(--color-light-grey);
+      border-color: var(--color-border-light);
+      color: var(--color-paragraph);
 
       &:hover,
       &:focus {
         background-color: var(--color-dark-grey);
-        border-color: var(--color-dark-grey);
+        border-color: var(--color-border-light);
         color: var(--color-white);
       }
     }
@@ -1378,7 +1336,7 @@ body.wp-admin:not(.gutenberg-editor-page) {
     .wp-editor-tabs {
       button.switch-html {
         background-color: var(--color-dark-grey);
-        border-color: var(--color-dark-grey);
+        border-color: var(--color-border-light);
         color: var(--color-white);
       }
     }
@@ -1388,7 +1346,7 @@ body.wp-admin:not(.gutenberg-editor-page) {
     .wp-editor-tabs {
       button.switch-tmce {
         background-color: var(--color-dark-grey);
-        border-color: var(--color-dark-grey);
+        border-color: var(--color-border-light);
         color: var(--color-white);
       }
     }
@@ -1398,86 +1356,84 @@ body.wp-admin:not(.gutenberg-editor-page) {
     &-toolbar {
       &-grp {
         background-color: var(--color-dark-grey);
-        border-color: var(--color-ultra-grey);
-        color: var(--color-light-grey);
+        border-color: var(--color-border-light);
+        color: var(--color-paragraph);
+      }
+    }
+
+    .mce-btn-group .mce-btn {
+      background-color: var(--color-clear);
+      border-color: var(--color-clear);
+
+      i {
+        color: var(--color-paragraph);
       }
 
-      .mce-btn-group {
-        .mce-btn {
-          background: var(--color-clear);
-          border-color: var(--color-clear);
+      &.mce-disabled {
+        &:hover,
+        &:focus {
+          border-color: var(--color-border-light);
+        }
+      }
+
+      &.mce-listbox {
+        background-color: var(--color-base-grey);
+        border-color: var(--color-border-light);
+
+        span {
+          color: var(--color-paragraph);
+        }
+
+        i {
+          border-top-color: var(--color-light-grey);
+        }
+
+        &.mce-active,
+        &:hover,
+        &:focus {
+          background-color: var(--color-dark-grey);
+          border-color: var(--color-border-light);
+
+          span {
+            color: var(--color-white);
+          }
 
           i {
-            color: var(--color-light-grey);
+            border-top-color: var(--color-light-grey);
           }
+        }
 
-          &.mce-disabled {
-            &:hover,
-            &:focus {
-              border-color: var(--color-ultra-grey);
-            }
+        &.mce-active {
+          i {
+            border-bottom-color: var(--color-light-grey);
           }
+        }
+      }
 
-          &.mce-listbox {
-            background-color: var(--color-base-grey);
-            border-color: var(--color-ultra-grey);
+      &.mce-active,
+      &:hover,
+      &:focus {
+        background-color: var(--color-base-grey);
+        border-color: var(--color-border-light);
+        box-shadow: none;
 
-            span {
-              color: var(--color-light-grey);
-            }
-
-            i {
-              border-top-color: var(--color-light-grey);
-            }
-
-            &.mce-active,
-            &:hover,
-            &:focus {
-              background-color: var(--color-dark-grey);
-              border-color: var(--color-ultra-grey);
-
-              span {
-                color: var(--color-white);
-              }
-
-              i {
-                border-top-color: var(--color-light-grey);
-              }
-            }
-
-            &.mce-active {
-              i {
-                border-bottom-color: var(--color-light-grey);
-              }
-            }
-          }
-
-          &.mce-active,
-          &:hover,
-          &:focus {
-            background: var(--color-base-grey);
-            border-color: var(--color-ultra-grey);
-            box-shadow: none;
-
-            i {
-              color: var(--color-white);
-            }
-          }
+        i {
+          color: var(--color-white);
         }
       }
     }
 
     &-panel {
-      background: var(--color-dark-grey);
+      background-color: var(--color-dark-grey);
 
       &.mce-menu {
-        border-color: var(--color-ultra-grey);
+        border-color: var(--color-border-light);
       }
 
       .mce-menu-item {
         .mce-ico,
         .mce-text {
-          color: var(--color-light-grey);
+          color: var(--color-paragraph);
         }
 
         &.mce-active,
@@ -1498,11 +1454,11 @@ body.wp-admin:not(.gutenberg-editor-page) {
   .wp-pointer {
     &-content {
       background-color: var(--color-dark-grey);
-      border-color: var(--color-ultra-grey);
-      color: var(--color-light-grey);
+      border-color: var(--color-border-light);
+      color: var(--color-paragraph);
 
       h3 {
-        border-color: var(--color-ultra-grey);
+        border-color: var(--color-border-light);
       }
     }
 
@@ -1536,15 +1492,15 @@ body.wp-admin:not(.gutenberg-editor-page) {
 
   .CodeMirror {
     background-color: var(--color-ultra-grey);
-    border-color: var(--color-ultra-grey);
-    color: var(--color-light-grey);
+    border-color: var(--color-border-light);
+    color: var(--color-paragraph);
 
     &-gutter {
       background-color: var(--color-base-grey);
-      border-color: var(--color-ultra-grey);
+      border-color: var(--color-border-light);
 
       &s {
-        border-color: var(--color-base-grey);
+        border-color: var(--color-border-light);
       }
     }
 
@@ -1553,7 +1509,7 @@ body.wp-admin:not(.gutenberg-editor-page) {
     }
 
     &-linenumber {
-      color: var(--color-light-grey);
+      color: var(--color-paragraph);
     }
 
     &-code {
@@ -1581,7 +1537,7 @@ body.wp-admin:not(.gutenberg-editor-page) {
         }
 
         &-comment {
-          color: var(--color-light-grey);
+          color: var(--color-paragraph);
         }
 
         &-keyword {
@@ -1610,20 +1566,20 @@ body.wp-admin:not(.gutenberg-editor-page) {
   h4,
   h5,
   h6 {
-    color: var(--color-light-grey);
+    color: var(--color-paragraph);
   }
 
   .notification-dialog,
   iframe {
-    background: var(--color-dark-grey);
+    background-color: var(--color-dark-grey);
   }
 
   .button,
   .button-secondary,
   &.wp-core-ui .button,
   &.wp-core-ui .button-secondary {
-    background: var(--color-dark-silver);
-    border-color: var(--color-dark-grey);
+    background-color: var(--color-dark-silver);
+    border-color: var(--color-border-light);
     color: var(--color-white);
 
     span {
@@ -1636,24 +1592,24 @@ body.wp-admin:not(.gutenberg-editor-page) {
     &:hover,
     &:focus,
     &:active {
-      background: var(--color-heavy-grey);
-      border-color: var(--color-dark-grey);
+      background-color: var(--color-heavy-grey);
+      border-color: var(--color-border-light);
       color: var(--color-white);
     }
 
     &:active {
-      background: var(--color-dark-grey);
-      border-color: var(--color-ultra-grey);
+      background-color: var(--color-dark-grey);
+      border-color: var(--color-border-light);
     }
 
     &.active {
-      background: var(--color-dark-grey);
-      border-color: var(--color-ultra-grey);
+      background-color: var(--color-dark-grey);
+      border-color: var(--color-border-light);
 
       &:hover,
       &:focus {
-        background: var(--color-heavy-grey);
-        border-color: var(--color-ultra-grey);
+        background-color: var(--color-heavy-grey);
+        border-color: var(--color-border-light);
       }
     }
   }
@@ -1662,7 +1618,7 @@ body.wp-admin:not(.gutenberg-editor-page) {
   .page-title-action,
   &.wp-core-ui .button-primary,
   .wrap a.page-title-action {
-    background: var(--color-primary);
+    background-color: var(--color-primary);
     border-color: var(--color-primary);
     color: var(--color-white);
 
@@ -1678,13 +1634,13 @@ body.wp-admin:not(.gutenberg-editor-page) {
     &:hover,
     &:focus,
     &:active {
-      background: var(--color-secondary);
+      background-color: var(--color-secondary);
       border-color: var(--color-secondary);
       color: var(--color-white);
     }
 
     &:active {
-      background: var(--color-dark-blue);
+      background-color: var(--color-dark-blue);
     }
   }
 
@@ -1696,8 +1652,8 @@ body.wp-admin:not(.gutenberg-editor-page) {
     .button.disabled,
     .button:disabled,
     .button[disabled] {
-      background: var(--color-dark-grey) !important;
-      border-color: var(--color-ultra-grey) !important;
+      background-color: var(--color-dark-grey) !important;
+      border-color: var(--color-border-light) !important;
       color: var(--color-light-grey) !important;
       text-shadow: none !important;
     }
@@ -1753,33 +1709,29 @@ body.wp-admin:not(.gutenberg-editor-page) {
     &.readonly,
     &.disabled {
       background-color: var(--color-dark-grey);
-      color: var(--color-light-grey);
+      color: var(--color-paragraph);
       opacity: .75;
     }
 
     &[readonly],
     &[disabled] {
       background-color: var(--color-dark-grey);
-      color: var(--color-light-grey);
+      color: var(--color-paragraph);
       opacity: .75;
     }
   }
 
   input[type="checkbox"]:checked::before {
+    color: var(--color-white);
     filter: grayscale(1) brightness(2);
   }
 
-  input {
-    &[type="checkbox"]:checked::before {
-      color: var(--color-white);
-    }
-
-    &[type="radio"]:checked::before {
-      background-color: var(--color-white);
-      margin-left: 3.4px;
-    }
+  input[type="radio"]:checked::before {
+    background-color: var(--color-white);
+    margin-left: 3.4px;
   }
 
+  // stylelint-disable selector-pseudo-element-no-unknown, selector-pseudo-class-no-unknown
   ::input-placeholder,
   ::placeholder,
   :input-placeholder,
@@ -1798,7 +1750,6 @@ body.wp-admin:not(.gutenberg-editor-page) {
 
     &:focus {
       box-shadow: 0 0 0 1px var(--color-primary), 0 0 2px 1px rgb(0 160 210 / .8);
-      box-shadow: 0 0 0 1px var(--color-primary), 0 0 2px 1px rgb(0 160 210 / .8);
       color: var(--color-primary);
     }
   }
@@ -1807,8 +1758,8 @@ body.wp-admin:not(.gutenberg-editor-page) {
   .select2-container--default .select2-selection--multiple,
   .select2-dropdown {
     background-color: var(--color-dark-silver);
-    border-color: var(--color-dark-silver);
-    color: var(--color-light-grey);
+    border-color: var(--color-border-light);
+    color: var(--color-paragraph);
 
     .select2-selection__rendered {
       color: var(--color-white) !important;
@@ -1820,24 +1771,24 @@ body.wp-admin:not(.gutenberg-editor-page) {
   }
 
   .select2-container--default .select2-selection--single .select2-selection__rendered {
-    color: var(--color-light-grey);
+    color: var(--color-paragraph);
   }
 
   .select2-container--default .select2-results__option--highlighted[aria-selected],
   .select2-container--default .select2-results__option[aria-selected="true"] {
     background-color: var(--color-ultra-grey);
-    color: var(--color-light-grey);
+    color: var(--color-paragraph);
   }
 
   #ui-datepicker-div {
     background-color: var(--color-base-grey);
-    color: var(--color-light-grey);
+    color: var(--color-paragraph);
 
     .ui-datepicker-header {
-      background: none;
       background-color: var(--color-ultra-grey);
+      background-image: none;
       border: 0;
-      color: var(--color-light-grey);
+      color: var(--color-paragraph);
     }
 
     .ui-datepicker-prev span,
@@ -1848,14 +1799,14 @@ body.wp-admin:not(.gutenberg-editor-page) {
     .ui-state-default,
     .ui-widget-content .ui-state-default,
     .ui-widget-header .ui-state-default {
-      background: var(--color-dark-grey);
-      color: var(--color-light-grey);
+      background-color: var(--color-dark-grey);
+      color: var(--color-paragraph);
     }
 
     .ui-datepicker-calendar {
       tbody {
         background-color: var(--color-base-grey);
-        color: var(--color-light-grey);
+        color: var(--color-paragraph);
       }
     }
   }
