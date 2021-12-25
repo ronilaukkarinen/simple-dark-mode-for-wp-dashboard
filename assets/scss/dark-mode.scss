@@ -1,19 +1,7 @@
-/**
- * Dark Mode for WP Dashboard CSS
- */
-
-// Import Colors
 @import 'colors';
-
-// Import Variables
 @import 'variables';
-
-// Import Admin
 @import 'admin';
-
-// Import Main
 @import 'main';
-
-// Import Plugins
 @import 'plugins/yoast-seo';
 @import 'plugins/simple-history';
+@import 'gutenberg';

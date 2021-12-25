@@ -6,12 +6,12 @@ body.wp-admin:not(.gutenberg-editor-page) {
   }
 
   .progress__part {
-    background-color: var(--color-ultra-grey);
+    background-color: var(--color-background-default);
   }
 
   .wpseo-metabox-content {
     .wpseo-metabox-menu {
-      background-color: var(--color-ultra-grey);
+      background-color: var(--color-background-default);
 
       ul li {
         background-color: var(--color-dark-grey);
@@ -21,7 +21,7 @@ body.wp-admin:not(.gutenberg-editor-page) {
         &.active,
         &:focus {
           a {
-            background-color: var(--color-ultra-grey);
+            background-color: var(--color-background-default);
             color: var(--color-light-grey);
           }
         }
@@ -36,12 +36,12 @@ body.wp-admin:not(.gutenberg-editor-page) {
 
     .wpseo-meta-section-react.active,
     .wpseo-meta-section.active {
-      background-color: var(--color-ultra-grey);
+      background-color: var(--color-background-default);
       color: var(--color-light-grey);
     }
 
     .Collapsible__StyledContainer-sc-13a0b13-1 {
-      background-color: var(--color-ultra-grey);
+      background-color: var(--color-background-default);
     }
 
     .Collapsible__StyledHeadingLevel-sc-13a0b13-4 {
@@ -88,12 +88,12 @@ body.wp-admin:not(.gutenberg-editor-page) {
     div[role="listbox"] {
       background-color: var(--color-dark-grey);
       border-color: var(--color-dark-grey);
-      box-shadow: 0 5px 5px 5px var(--color-ultra-grey);
+      box-shadow: 0 5px 5px 5px var(--color-background-default);
       color: var(--color-light-grey);
     }
 
     div[aria-selected="true"] {
-      background-color: var(--color-ultra-grey);
+      background-color: var(--color-background-default);
     }
 
     progress {
@@ -106,12 +106,12 @@ body.wp-admin:not(.gutenberg-editor-page) {
     }
 
     .ContentAnalysis__ContentAnalysisContainer-sc-14uwo9d-0 {
-      background-color: var(--color-ultra-grey);
+      background-color: var(--color-background-default);
     }
   }
 
   .yoast-select__control {
-    border-color: var(--color-ultra-grey);
+    border-color: var(--color-background-default);
   }
 
   .yoast-select-container,
@@ -122,7 +122,7 @@ body.wp-admin:not(.gutenberg-editor-page) {
       &:hover,
       &:focus,
       &.yoast-select__option--is-focused {
-        background-color: var(--color-ultra-grey);
+        background-color: var(--color-background-default);
         color: var(--color-light-grey);
       }
     }
@@ -143,19 +143,19 @@ body.wp-admin:not(.gutenberg-editor-page) {
   }
 
   .yoast-promo-extension {
-    background-color: var(--color-ultra-grey);
-    border-color: var(--color-ultra-grey);
+    background-color: var(--color-background-default);
+    border-color: var(--color-background-default);
     color: var(--color-light-grey);
   }
 
   .yoast-notifications {
     .yoast-container {
-      background-color: var(--color-ultra-grey);
-      border-color: var(--color-ultra-grey);
+      background-color: var(--color-background-default);
+      border-color: var(--color-background-default);
 
       h3.yoast-notifications-header {
         background-color: var(--color-dark-grey);
-        border-bottom: 1px solid var(--color-ultra-grey);
+        border-bottom: 1px solid var(--color-background-default);
       }
 
       .yoast-notification {
@@ -166,8 +166,8 @@ body.wp-admin:not(.gutenberg-editor-page) {
   }
 
   .yoast_premium_upsell {
-    background-color: var(--color-ultra-grey);
-    border-color: var(--color-ultra-grey);
+    background-color: var(--color-background-default);
+    border-color: var(--color-background-default);
   }
 
   .yoast-button-upsell,
@@ -176,8 +176,8 @@ body.wp-admin:not(.gutenberg-editor-page) {
   }
 
   .yoast-sidebar__section {
-    background-color: var(--color-ultra-grey);
-    border-color: var(--color-ultra-grey);
+    background-color: var(--color-background-default);
+    border-color: var(--color-background-default);
   }
 
   .switch-light.switch-yoast-seo > span,
@@ -203,7 +203,7 @@ body.wp-admin:not(.gutenberg-editor-page) {
   }
 
   .wpseo_content_wrapper .paper.tab-block.search-appearance {
-    background-color: var(--color-ultra-grey);
+    background-color: var(--color-background-default);
   }
 
   .wpseo_content_wrapper {
@@ -220,12 +220,12 @@ body.wp-admin:not(.gutenberg-editor-page) {
     div[role="listbox"] {
       background-color: var(--color-dark-grey);
       border-color: var(--color-dark-grey);
-      box-shadow: 0 5px 5px 5px var(--color-ultra-grey);
+      box-shadow: 0 5px 5px 5px var(--color-background-default);
       color: var(--color-light-grey);
     }
 
     div[aria-selected="true"] {
-      background-color: var(--color-ultra-grey);
+      background-color: var(--color-background-default);
     }
 
     .draftJsMentionPlugin__mention__29BEd {

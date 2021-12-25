@@ -1,0 +1,373 @@
+// stylelint-disable selector-id-pattern, selector-max-specificity, declaration-no-important
+// Dark mode for Gutenberg
+body.wp-admin .editor-styles-wrapper,
+.theme-dark {
+  --color-paragraph: #f2f2f2;
+  --color-white: #f2f2f2;
+  --color-black: #14171d;
+  --color-rain: #7187e7;
+  --color-alt: #7988d6;
+  --color-grey: rgb(255 255 255 / .6);
+  --color-grey-two: rgb(255 255 255 / .7);
+  --color-border-light: rgb(255 255 255 / .1);
+  --color-light-blue: rgb(255 255 255 / .4);
+  --color-white-rgb: 255 255 255;
+  --color-black-rgb: 19 25 34;
+  --color-light-grey: rgb(255 255 255 / .1);
+  --color-darkgrey: rgb(255 255 255 / .5);
+  --color-black-two: rgb(255 255 255 / .6);
+  --color-black-three: rgb(255 255 255 / .8);
+  --color-grey-alt: rgb(255 255 255 / .6);
+  --color-foggy-mountain: #393939;
+  --color-lighter-grey: rgb(255 255 255 / .6);
+  --color-screechin-white: rgb(255 255 255 / .6);
+  --color-pickled-bluewood: rgb(255 255 255 / .8);
+  --color-figcaptions-rgb: 155 155 155;
+  --color-post-author-background-rgb: 18 20 26;
+  --color-post-author-border: #69634e;
+  --color-midnight-gray: #bbb;
+  --color-background-default: #14171d;
+  --color-shark: #f8f8f8;
+
+  // Forms
+  --color-background-input-field: #000;
+  --color-form-text: #f2f2f2;
+  --color-form-label-text: #f2f2f2;
+  --color-required-label-text: #f2f2f2;
+  --color-border-forms: #f2f2f2;
+  --color-border-forms-focus: #f2f2f2;
+  --color-button: #000;
+  --color-button-hover: #000;
+  --color-button-background: #f2f2f2;
+  --color-button-background-hover: #ccc;
+  --color-checkbox: #f2f2f2;
+  --color-checkbox-outline: 0 0 0 3px rgb(84 87 115 / .2);
+  --color-checkbox-border-hover: color.adjust(#545773, 15%);
+  --color-placeholder: #f2f2f2;
+  --color-placeholder-focus: #f2f2f2;
+
+  .entry-content ul.metadata a:not(.button):not(.post-edit-link):not(.author-link).is-external-link::after {
+    background-image: url('../../svg/external-link-d0d1d2.svg') !important;
+  }
+
+  // Frappe charts
+  rect[fill="#ebedf0"] {
+    fill: rgb(55 55 55 / .3);
+  }
+
+  [fill="#555b51"] {
+    fill: rgb(255 255 255 / .2);
+  }
+
+  // Exceptions
+  .hero-single .article-title-area {
+    --color-white: #fff;
+  }
+}
+
+// Gutenberg editor dark theme
+// stylelint-disable
+.interface-interface-skeleton__footer .block-editor-block-breadcrumb,
+.interface-interface-skeleton__sidebar,
+.interface-interface-skeleton__footer,
+.yoast-seo-sidebar-panel button,
+.media-modal-content .media-frame-title,
+.media-modal-content .media-frame-content,
+.media-toolbar,
+.block-editor-post-preview__button-toggle,
+.editor-post-featured-image__toggle,
+.editor-post-featured-image__toggle:hover,
+#titlediv #title,
+.wp-admin input[type=text],
+.wp-admin input[type=search],
+.wp-admin input[type=radio],
+.wp-admin input[type=tel],
+.wp-admin input[type=time],
+.wp-admin input[type=url],
+.wp-admin input[type=week],
+.wp-admin input[type=password],
+.wp-admin input[type=checkbox],
+.wp-admin input[type=color],
+.wp-admin input[type=date],
+.wp-admin input[type=datetime],
+.wp-admin input[type=datetime-local],
+.wp-admin input[type=email],
+.wp-admin input[type=month],
+.wp-admin input[type=number],
+.wp-admin select,
+.wp-admin textarea:not(.editor-post-title__input),
+.theme-dark .acf-fields > .acf-field,
+.theme-dark .block-editor-block-contextual-toolbar,
+.theme-dark .block-editor-block-contextual-toolbar.is-fixed,
+.theme-dark .block-editor-block-contextual-toolbar.is-fixed .block-editor-block-toolbar .components-toolbar,
+.theme-dark .block-editor-block-contextual-toolbar.is-fixed .block-editor-block-toolbar .components-toolbar-group,
+.theme-dark .block-editor-block-styles__item-preview,
+.theme-dark .block-editor-block-toolbar .components-toolbar,
+.theme-dark .block-editor-block-toolbar .components-toolbar-group,
+.theme-dark .components-panel,
+.theme-dark .components-panel__body,
+.theme-dark .components-panel__body-toggle.components-button,
+.theme-dark .components-panel__body:hover,
+.theme-dark .components-popover__content,
+.theme-dark .components-text-control__input,
+.theme-dark .components-text-control__input[type=color],
+.theme-dark .components-text-control__input[type=date],
+.theme-dark .components-text-control__input[type=datetime-local],
+.theme-dark .components-text-control__input[type=datetime],
+.theme-dark .components-text-control__input[type=email],
+.theme-dark .components-text-control__input[type=month],
+.theme-dark .components-text-control__input[type=number],
+.theme-dark .components-text-control__input[type=password],
+.theme-dark .components-text-control__input[type=tel],
+.theme-dark .components-text-control__input[type=text],
+.theme-dark .components-text-control__input[type=time],
+.theme-dark .components-text-control__input[type=url],
+.theme-dark .components-text-control__input[type=week],
+.theme-dark .edit-post-header,
+.theme-dark .edit-post-visual-editor__content-area > div,
+.theme-dark .editor-styles-wrapper,
+.theme-dark .interface-complementary-area,
+.theme-dark .interface-complementary-area-header,
+.theme-dark .interface-interface-skeleton__header,
+.theme-dark .interface-interface-skeleton__secondary-sidebar,
+.theme-dark .interface-interface-skeleton__sidebar,
+.theme-dark .postbox,
+.theme-dark .postbox-header,
+body.wp-admin .acf-fields > .acf-field,
+body.wp-admin .block-editor-block-contextual-toolbar,
+body.wp-admin .block-editor-block-contextual-toolbar.is-fixed,
+body.wp-admin .block-editor-block-contextual-toolbar.is-fixed .block-editor-block-toolbar .components-toolbar,
+body.wp-admin .block-editor-block-contextual-toolbar.is-fixed .block-editor-block-toolbar .components-toolbar-group,
+body.wp-admin .block-editor-block-styles__item-preview,
+body.wp-admin .block-editor-block-toolbar .components-toolbar,
+body.wp-admin .block-editor-block-toolbar .components-toolbar-group,
+body.wp-admin .components-panel,
+body.wp-admin .components-panel__body,
+body.wp-admin .components-panel__body-toggle.components-button,
+body.wp-admin .components-panel__body:hover,
+body.wp-admin .components-popover__content,
+body.wp-admin .components-text-control__input,
+body.wp-admin .components-text-control__input[type=color],
+body.wp-admin .components-text-control__input[type=date],
+body.wp-admin .components-text-control__input[type=datetime-local],
+body.wp-admin .components-text-control__input[type=datetime],
+body.wp-admin .components-text-control__input[type=email],
+body.wp-admin .components-text-control__input[type=month],
+body.wp-admin .components-text-control__input[type=number],
+body.wp-admin .components-text-control__input[type=password],
+body.wp-admin .components-text-control__input[type=tel],
+body.wp-admin .components-text-control__input[type=text],
+body.wp-admin .components-text-control__input[type=time],
+body.wp-admin .components-text-control__input[type=url],
+body.wp-admin .components-text-control__input[type=week],
+body.wp-admin .edit-post-header,
+body.wp-admin .edit-post-visual-editor__content-area > div,
+body.wp-admin .editor-styles-wrapper,
+body.wp-admin .editor-styles-wrapper .acf-fields > .acf-field,
+body.wp-admin .editor-styles-wrapper .block-editor-block-contextual-toolbar,
+body.wp-admin .editor-styles-wrapper .block-editor-block-contextual-toolbar.is-fixed,
+body.wp-admin .editor-styles-wrapper .block-editor-block-contextual-toolbar.is-fixed .block-editor-block-toolbar .components-toolbar,
+body.wp-admin .editor-styles-wrapper .block-editor-block-contextual-toolbar.is-fixed .block-editor-block-toolbar .components-toolbar-group,
+body.wp-admin .editor-styles-wrapper .block-editor-block-styles__item-preview,
+body.wp-admin .editor-styles-wrapper .block-editor-block-toolbar .components-toolbar,
+body.wp-admin .editor-styles-wrapper .block-editor-block-toolbar .components-toolbar-group,
+body.wp-admin .editor-styles-wrapper .components-panel,
+body.wp-admin .editor-styles-wrapper .components-panel__body,
+body.wp-admin .editor-styles-wrapper .components-panel__body-toggle.components-button,
+body.wp-admin .editor-styles-wrapper .components-panel__body:hover,
+body.wp-admin .editor-styles-wrapper .components-popover__content,
+body.wp-admin .editor-styles-wrapper .components-text-control__input,
+body.wp-admin .editor-styles-wrapper .components-text-control__input[type=color],
+body.wp-admin .editor-styles-wrapper .components-text-control__input[type=date],
+body.wp-admin .editor-styles-wrapper .components-text-control__input[type=datetime-local],
+body.wp-admin .editor-styles-wrapper .components-text-control__input[type=datetime],
+body.wp-admin .editor-styles-wrapper .components-text-control__input[type=email],
+body.wp-admin .editor-styles-wrapper .components-text-control__input[type=month],
+body.wp-admin .editor-styles-wrapper .components-text-control__input[type=number],
+body.wp-admin .editor-styles-wrapper .components-text-control__input[type=password],
+body.wp-admin .editor-styles-wrapper .components-text-control__input[type=tel],
+body.wp-admin .editor-styles-wrapper .components-text-control__input[type=text],
+body.wp-admin .editor-styles-wrapper .components-text-control__input[type=time],
+body.wp-admin .editor-styles-wrapper .components-text-control__input[type=url],
+body.wp-admin .editor-styles-wrapper .components-text-control__input[type=week],
+body.wp-admin .editor-styles-wrapper .edit-post-header,
+body.wp-admin .editor-styles-wrapper .edit-post-visual-editor__content-area > div,
+body.wp-admin .editor-styles-wrapper .editor-styles-wrapper,
+body.wp-admin .editor-styles-wrapper .interface-complementary-area,
+body.wp-admin .editor-styles-wrapper .interface-complementary-area-header,
+body.wp-admin .editor-styles-wrapper .interface-interface-skeleton__header,
+body.wp-admin .editor-styles-wrapper .interface-interface-skeleton__secondary-sidebar,
+body.wp-admin .editor-styles-wrapper .interface-interface-skeleton__sidebar,
+body.wp-admin .editor-styles-wrapper .postbox,
+body.wp-admin .editor-styles-wrapper .postbox-header,
+body.wp-admin .interface-complementary-area,
+body.wp-admin .interface-complementary-area-header,
+body.wp-admin .interface-interface-skeleton__header,
+body.wp-admin .interface-interface-skeleton__secondary-sidebar,
+body.wp-admin .interface-interface-skeleton__sidebar,
+body.wp-admin .postbox,
+body.wp-admin .postbox-header,
+html.wp-toolbar:root .acf-fields > .acf-field,
+html.wp-toolbar:root .block-editor-block-contextual-toolbar,
+html.wp-toolbar:root .block-editor-block-contextual-toolbar.is-fixed,
+html.wp-toolbar:root .block-editor-block-contextual-toolbar.is-fixed .block-editor-block-toolbar .components-toolbar,
+html.wp-toolbar:root .block-editor-block-contextual-toolbar.is-fixed .block-editor-block-toolbar .components-toolbar-group,
+html.wp-toolbar:root .block-editor-block-styles__item-preview,
+html.wp-toolbar:root .block-editor-block-toolbar .components-toolbar,
+html.wp-toolbar:root .block-editor-block-toolbar .components-toolbar-group,
+html.wp-toolbar:root .components-panel,
+html.wp-toolbar:root .components-panel__body,
+html.wp-toolbar:root .components-panel__body-toggle.components-button,
+html.wp-toolbar:root .components-panel__body:hover,
+html.wp-toolbar:root .components-popover__content,
+html.wp-toolbar:root .components-text-control__input,
+html.wp-toolbar:root .components-text-control__input[type=color],
+html.wp-toolbar:root .components-text-control__input[type=date],
+html.wp-toolbar:root .components-text-control__input[type=datetime-local],
+html.wp-toolbar:root .components-text-control__input[type=datetime],
+html.wp-toolbar:root .components-text-control__input[type=email],
+html.wp-toolbar:root .components-text-control__input[type=month],
+html.wp-toolbar:root .components-text-control__input[type=number],
+html.wp-toolbar:root .components-text-control__input[type=password],
+html.wp-toolbar:root .components-text-control__input[type=tel],
+html.wp-toolbar:root .components-text-control__input[type=text],
+html.wp-toolbar:root .components-text-control__input[type=time],
+html.wp-toolbar:root .components-text-control__input[type=url],
+html.wp-toolbar:root .components-text-control__input[type=week],
+html.wp-toolbar:root .edit-post-header,
+html.wp-toolbar:root .edit-post-visual-editor__content-area > div,
+html.wp-toolbar:root .editor-styles-wrapper,
+html.wp-toolbar:root .interface-complementary-area,
+html.wp-toolbar:root .interface-complementary-area-header,
+html.wp-toolbar:root .interface-interface-skeleton__header,
+html.wp-toolbar:root .interface-interface-skeleton__secondary-sidebar,
+html.wp-toolbar:root .interface-interface-skeleton__sidebar,
+html.wp-toolbar:root .postbox,
+html.wp-toolbar:root .postbox-header,
+#wpbody .try-gutenberg-panel,
+.edit-post-post-link__preview-label,
+#wpbody .welcome-panel,
+#wpbody .postbox,
+.edit-post-layout__metaboxes:not(:empty),
+.edit-post-layout__metaboxes,
+#wpbody .card,
+.components-button.editor-post-last-revision__title:active,
+.components-button.editor-post-last-revision__title:hover,
+#wpbody .stuffbox,
+#wpbody #activity-widget #the-comment-list .comment-item,
+#wpbody .community-events ul,
+#wpbody .wp-filter,
+#wpbody .menu-edit #post-body,
+#wpfooter .try-gutenberg-panel,
+#wpfooter .welcome-panel,
+#wpfooter .postbox,
+#wpfooter .card,
+#wpfooter .stuffbox,
+#wpfooter #activity-widget #the-comment-list .comment-item,
+#wpfooter .community-events ul,
+#wpfooter .wp-filter,
+#wpfooter .menu-edit #post-body,
+.postbox,
+.components-text-control__input,
+.components-text-control__input[type=color],
+.components-text-control__input[type=date],
+.components-text-control__input[type=datetime-local],
+.components-text-control__input[type=datetime],
+.components-text-control__input[type=email],
+.components-text-control__input[type=month],
+.components-text-control__input[type=number],
+.components-text-control__input[type=password],
+.components-text-control__input[type=tel],
+.components-text-control__input[type=text],
+.components-text-control__input[type=time],
+.components-text-control__input[type=url],
+.components-text-control__input[type=week],
+.acf-fields > .acf-field,
+.postbox-header,
+.block-editor-block-contextual-toolbar,
+.components-popover__content,
+.components-panel__body,
+.components-panel__body:hover,
+.interface-interface-skeleton__header,
+.block-editor-block-contextual-toolbar.is-fixed,
+.block-editor-block-toolbar .components-toolbar,
+.block-editor-block-toolbar .components-toolbar-group,
+.block-editor-block-contextual-toolbar.is-fixed .block-editor-block-toolbar .components-toolbar,
+.block-editor-block-contextual-toolbar.is-fixed .block-editor-block-toolbar .components-toolbar-group,
+.block-editor-block-styles__item-preview,
+.components-panel__body-toggle.components-button,
+.edit-post-visual-editor__content-area > div,
+.components-panel,
+.interface-complementary-area-header,
+.edit-post-header,
+.block-editor-block-contextual-toolbar,
+.editor-styles-wrapper,
+.interface-complementary-area,
+.interface-interface-skeleton__secondary-sidebar,
+.media-frame-router,
+.components-button.is-secondary:disabled,
+.components-button.is-secondary[aria-disabled=true],
+.components-button.is-secondary[aria-disabled=true]:hover,
+.components-button.is-tertiary:disabled,
+.components-button.is-tertiary[aria-disabled=true],
+.components-button.is-tertiary[aria-disabled=true]:hover,
+.components-popover.block-editor-block-switcher__popover .components-popover__content > div,
+.components-toolbar,
+.provider-nav,
+.provider-nav--btn.active,
+.provider-nav--btn.active:hover,
+.provider-nav--btn,
+.block-editor-block-inspector__no-blocks,
+.block-editor-inserter__search,
+.instant-img-container .load-more-wrap,
+.instant-img-container .control-nav li.search-field input,
+.block-editor-inserter__tabs .components-tab-panel__tabs,
+.interface-interface-skeleton__sidebar,
+.ui-sortable-handle,
+.postbox.acf-postbox,
+.postbox,
+.postbox-header,
+#wpseo_meta,
+.wpseo-metabox-content button,
+.wpseo-metabox-content div,
+.wpseo-metabox-content input,
+.wpseo-metabox-content textarea,
+#wpseo-metabox-root div,
+#wpseo-metabox-root div div {
+  background-color: var(--color-background-default) !important;
+  border-color: var(--color-border-light) !important;
+  box-shadow: none !important;
+  color: var(--color-paragraph) !important;
+}
+
+.block-editor-block-card__title,
+.block-editor-block-types-list__item-icon,
+.media-router .media-menu-item,
+.components-button {
+  color: var(--color-paragraph) !important;
+}
+
+#wpbody p,
+#wpbody code,
+#wpbody kbd,
+#wpbody label,
+#wpbody .form-table th,
+#wpbody .form-wrap label,
+#wpbody .form-wrap p,
+#wpbody p.description,
+#wpbody .importer-title,
+#wpbody .menu-in-location,
+#wpbody .theme-location-set,
+#wpfooter p,
+#wpfooter code,
+#wpfooter kbd,
+#wpfooter label,
+#wpfooter .form-table th,
+#wpfooter .form-wrap label,
+#wpfooter .form-wrap p,
+#wpfooter p.description,
+#wpfooter .importer-title,
+#wpfooter .menu-in-location,
+#wpfooter .theme-location-set {
+  color: var(--color-paragraph) !important;
+}
