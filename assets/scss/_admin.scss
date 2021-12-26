@@ -250,7 +250,7 @@ input[type="checkbox"] {
 #adminmenu li.menu-top:hover div.wp-menu-image::before,
 #adminmenu li.menu-top:focus div.wp-menu-image::before,
 #adminmenu li.opensub > a.menu-top div.wp-menu-image::before {
-  color: var(--menu-highlight-icon);
+  color: var(--menu-icon);
 }
 
 /* Active tabs use a bottom border color that matches the page background color. */
@@ -325,7 +325,7 @@ ul#adminmenu > li.current > a.current::after {
 #adminmenu li:hover div.wp-menu-image::before,
 #adminmenu li a:focus div.wp-menu-image::before,
 #adminmenu li.opensub div.wp-menu-image::before {
-  color: var(--color-accent-blue);
+  color: var(--menu-icon);
 }
 
 /* Admin Menu: bubble */
