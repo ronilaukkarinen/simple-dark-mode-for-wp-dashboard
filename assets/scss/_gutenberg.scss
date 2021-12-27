@@ -342,6 +342,8 @@ html.wp-toolbar:root .postbox-header,
 .interface-complementary-area .components-panel__header,
 .components-base-control div,
 .orientation-list,
+.block-editor-inserter__popover.is-quick .components-popover__content .block-editor-inserter__quick-inserter > *,
+.block-editor-inserter__quick-inserter-results,
 #wpseo-metabox-root div div {
   background-color: var(--color-background-default) !important;
   border-color: var(--color-border-light) !important;
