@@ -339,6 +339,9 @@ html.wp-toolbar:root .postbox-header,
 .wpseo-metabox-content input,
 .wpseo-metabox-content textarea,
 #wpseo-metabox-root div,
+.interface-complementary-area .components-panel__header,
+.components-base-control div,
+.orientation-list,
 #wpseo-metabox-root div div {
   background-color: var(--color-background-default) !important;
   border-color: var(--color-border-light) !important;
@@ -346,6 +349,9 @@ html.wp-toolbar:root .postbox-header,
   color: var(--color-paragraph) !important;
 }
 
+.auto-fold #adminmenu li.menu-top .wp-submenu > li > a,
+.ab-icon::before,
+.ab-item,
 .block-editor-block-card__title,
 .block-editor-block-types-list__item-icon,
 .media-router .media-menu-item,
@@ -353,6 +359,7 @@ html.wp-toolbar:root .postbox-header,
   color: var(--color-paragraph) !important;
 }
 
+.auto-fold #adminmenu .wp-menu-name,
 #wpbody p,
 #wpbody code,
 #wpbody kbd,
@@ -374,6 +381,7 @@ html.wp-toolbar:root .postbox-header,
 #wpfooter p.description,
 #wpfooter .importer-title,
 #wpfooter .menu-in-location,
+.wp-menu-name,
 #wpfooter .theme-location-set {
   color: var(--color-paragraph) !important;
 }
@@ -383,6 +391,7 @@ html.wp-toolbar:root .postbox-header,
   color: #14171d !important;
 }
 
+.upload-ui button,
 .block-editor-block-breadcrumb__current {
   color: #fff !important;
 }

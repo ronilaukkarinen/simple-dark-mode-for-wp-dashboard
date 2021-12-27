@@ -1,4 +1,5 @@
 // stylelint-disable selector-id-pattern, selector-max-specificity, declaration-no-important, max-line-length
+@import 'colors';
 @import 'variables';
 @import 'mixins';
 
@@ -155,7 +156,7 @@ input[type="checkbox"] {
   }
 
   .wp-ui-text-icon {
-    color: var(--menu-icon);
+    color: var(--color-icons);
   }
 
   // @if ($low-contrast-theme != "true") {
@@ -236,7 +237,7 @@ input[type="checkbox"] {
 }
 
 #adminmenu div.wp-menu-image::before {
-  color: var(--menu-icon);
+  color: var(--color-icons);
 }
 
 #adminmenu a:hover,
@@ -250,7 +251,7 @@ input[type="checkbox"] {
 #adminmenu li.menu-top:hover div.wp-menu-image::before,
 #adminmenu li.menu-top:focus div.wp-menu-image::before,
 #adminmenu li.opensub > a.menu-top div.wp-menu-image::before {
-  color: var(--menu-icon);
+  color: var(--color-icons);
 }
 
 /* Active tabs use a bottom border color that matches the page background color. */
@@ -276,8 +277,9 @@ input[type="checkbox"] {
   border-right-color: var(--menu-submenu-background);
 }
 
+.auto-fold #adminmenu .wp-menu-name,
 #adminmenu .wp-submenu .wp-submenu-head {
-  color: var(--menu-submenu-current-text);
+  color: var(--color-paragraph);
 }
 
 #adminmenu .wp-submenu a,
@@ -315,7 +317,7 @@ ul#adminmenu > li.current > a.current::after {
 #adminmenu li.wp-has-current-submenu .wp-submenu .wp-submenu-head,
 .folded #adminmenu li.current.menu-top {
   background-color: var(--menu-current-background);
-  color: var(--menu-submenu-current-text);
+  color: var(--color-paragraph);
 }
 
 #adminmenu li.wp-has-current-submenu div.wp-menu-image::before,
@@ -325,7 +327,7 @@ ul#adminmenu > li.current > a.current::after {
 #adminmenu li:hover div.wp-menu-image::before,
 #adminmenu li a:focus div.wp-menu-image::before,
 #adminmenu li.opensub div.wp-menu-image::before {
-  color: var(--menu-icon);
+  color: var(--color-icons);
 }
 
 /* Admin Menu: bubble */
@@ -371,7 +373,7 @@ ul#adminmenu > li.current > a.current::after {
 #wpadminbar .ab-icon::before,
 #wpadminbar .ab-item::before,
 #wpadminbar .ab-item::after {
-  color: var(--menu-icon);
+  color: var(--color-icons);
 }
 
 #wpadminbar:not(.mobile) .ab-top-menu > li:hover > .ab-item,
@@ -415,7 +417,7 @@ ul#adminmenu > li.current > a.current::after {
 
 #wpadminbar .quicklinks li .blavatar,
 #wpadminbar .menupop .menupop > .ab-item::before {
-  color: var(--menu-icon);
+  color: var(--color-icons);
 }
 
 #wpadminbar .quicklinks .menupop ul li a:hover,
@@ -450,12 +452,12 @@ ul#adminmenu > li.current > a.current::after {
 
 #wpadminbar.mobile .quicklinks .hover .ab-icon::before,
 #wpadminbar.mobile .quicklinks .hover .ab-item::before {
-  color: var(--menu-icon);
+  color: var(--color-icons);
 }
 
 /* Admin Bar: search */
 #wpadminbar #adminbarsearch::before {
-  color: var(--menu-icon);
+  color: var(--color-icons);
 }
 
 #wpadminbar > #wp-toolbar > #wp-admin-bar-top-secondary > #wp-admin-bar-search #adminbarsearch input.adminbar-input:focus {
@@ -576,7 +578,7 @@ body.more-filters-opened .more-filters:focus::before {
 
 /* Responsive Component */
 div#wp-responsive-toggle a::before {
-  color: var(--menu-icon);
+  color: var(--color-icons);
 }
 
 .wp-responsive-open div#wp-responsive-toggle a {
@@ -590,7 +592,7 @@ div#wp-responsive-toggle a::before {
 }
 
 .wp-responsive-open #wpadminbar #wp-admin-bar-menu-toggle .ab-icon::before {
-  color: var(--menu-icon);
+  color: var(--color-icons);
 }
 
 /* TinyMCE */
