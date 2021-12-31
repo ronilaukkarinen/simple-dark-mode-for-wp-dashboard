@@ -346,8 +346,11 @@ html.wp-toolbar:root .postbox-header,
 .acf-block-component,
 .acf-block-fields,
 .acf-field-object,
+.filter-dropdown--menu,
+.filter-dropdown--menu.expanded,
 .acf-fields,
 .acf-block-component div,
+.instant-img-container .control-nav,
 .acf-block-component input,
 .block-editor-inserter__quick-inserter-results,
 #wpseo-metabox-root div div {
@@ -363,6 +366,7 @@ html.wp-toolbar:root .postbox-header,
 .block-editor-block-card__title,
 .block-editor-block-types-list__item-icon,
 .media-router .media-menu-item,
+.filter-dropdown--menu button.selected,
 .components-button {
   color: var(--color-paragraph) !important;
 }
@@ -390,6 +394,8 @@ html.wp-toolbar:root .postbox-header,
 #wpfooter .importer-title,
 #wpfooter .menu-in-location,
 .wp-menu-name,
+.filter-dropdown--button-selected,
+.load-more-wrap button,
 #wpfooter .theme-location-set {
   color: var(--color-paragraph) !important;
 }
@@ -399,6 +405,12 @@ html.wp-toolbar:root .postbox-header,
   color: #14171d !important;
 }
 
+.components-form-token-field__remove-token.components-button svg {
+  fill: #1e1e1e !important;
+}
+
+.wp-admin.post-type-post .editor-post-title__input,
+.search-results-header--text strong,
 .upload-ui button,
 .block-editor-block-breadcrumb__current {
   color: #fff !important;
@@ -406,4 +418,13 @@ html.wp-toolbar:root .postbox-header,
 
 .block-editor-inserter__search-icon svg {
   fill: #fff;
+}
+
+.media-frame-router button#menu-item-instantimages.active {
+  background-color: transparent;
+}
+
+.filter-dropdown--menu button,
+.filter-dropdown button {
+  color: var(--color-grey);
 }
