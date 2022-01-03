@@ -352,6 +352,7 @@ html.wp-toolbar:root .postbox-header,
 .acf-block-component div,
 .instant-img-container .control-nav,
 .acf-block-component input,
+.acf-button-group label:not(.selected),
 .block-editor-inserter__quick-inserter-results,
 #wpseo-metabox-root div div {
   background-color: var(--color-background-default) !important;
