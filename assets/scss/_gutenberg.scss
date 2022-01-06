@@ -357,6 +357,7 @@ html.wp-toolbar:root .postbox-header,
 .acf-relationship,
 .acf-relationship .filters,
 .acf-relationship .filters .filter,
+.components-input-control__container select,
 body #wpbody-content .filters,
 body #wpbody-content .selection,
 body #wpbody-content .choices,
@@ -373,6 +374,11 @@ body .acf-relationship .list,
   border-color: var(--color-border-light) !important;
   box-shadow: none !important;
   color: var(--color-paragraph) !important;
+}
+
+.components-input-control__container select {
+  position: relative;
+  z-index: 3;
 }
 
 .auto-fold #adminmenu li.menu-top .wp-submenu > li > a,
