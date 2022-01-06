@@ -21,3 +21,4 @@ The theme tries to respect the original WordPress colors as much as possible.
 - Yoast SEO
 - Advanced Custom Fields and Advanced Custom Field Pro
 - Simple History
+- Instant Images
