@@ -6,7 +6,6 @@
   .SimpleHistoryLogitems__pagination,
   .SimpleHistoryLogitems__pagination div,
   .SimpleHistoryLogitem--loglevel-info {
-    // stylelint-disable-next-line
     background-color: var(--color-dark-grey) !important;
   }
 
@@ -15,7 +14,6 @@
   }
 
   .SimpleHistoryLogitem::before {
-    // stylelint-disable-next-line
     background-color: var(--color-border-light) !important;
   }
 }
