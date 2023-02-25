@@ -11,9 +11,6 @@ The simplest way to make your WordPress admin dashboard dark.
 
 Just activate and get a dark WP-Admin Dashboard theme!
 
-Plugins officially supported:
-* Yoast SEO
-
 == Installation ==
 
 1. Upload the plugin package to the plugins directory.
@@ -24,7 +21,3 @@ Plugins officially supported:
 1. Dashboard
 2. Plugins
 3. Themes
-
-== Changelog ==
-= 1.0.0 =
-- First version online

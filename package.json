@@ -1,6 +1,6 @@
 {
   "name": "simple-dark-mode-for-wp-dashboard",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "The simplest way to make your WordPress admin dashboard dark",
   "author": "Roni Laukkarinen (roni@dude.fi)",
   "devDependencies": {

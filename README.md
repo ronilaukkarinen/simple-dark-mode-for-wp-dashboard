@@ -22,7 +22,6 @@ The theme tries to respect the original WordPress colors as much as possible.
 - Advanced Custom Fields and Advanced Custom Field Pro
 - Simple History
 - Instant Images
-- Koko analytics
 
 ## Development
 
