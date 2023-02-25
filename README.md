@@ -22,3 +22,11 @@ The theme tries to respect the original WordPress colors as much as possible.
 - Advanced Custom Fields and Advanced Custom Field Pro
 - Simple History
 - Instant Images
+
+## Development
+
+1. Fork this repository
+2. Run `npm install`
+3. Run `gulp`
+4. Start editing assets/scss/
+5. Commit and send a PR
