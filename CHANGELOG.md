@@ -1,3 +1,7 @@
+### 1.0.3: 2024-06-23
+
+* Point the plugin URL to GitHub repository for now
+
 ### 1.0.2: 2024-06-23
 
 * Declare PHP 8.3 support in phpcs.xml
