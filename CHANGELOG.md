@@ -1,3 +1,7 @@
+### 1.0.4: 2024-06-23
+
+* Fix text fill color
+
 ### 1.0.3: 2024-06-23
 
 * Point the plugin URL to GitHub repository for now

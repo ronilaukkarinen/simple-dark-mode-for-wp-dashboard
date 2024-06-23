@@ -1576,7 +1576,10 @@ body.wp-admin:not(.gutenberg-editor-page) {
 
   // Autocomplete inputs
   input[type="number"] {
-    -webkit-text-fill-color: var(--color-white);
+    /* stylelint-disable-next-line */
+    -webkit-text-fill-color: var(--color-white) !important;
+    /* stylelint-disable-next-line */
+    text-fill-color: var(--color-white) !important;
   }
 
   .button,
