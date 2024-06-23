@@ -1,3 +1,7 @@
+### 1.0.6: 2024-06-23
+
+* Patch update for compiled styles
+
 ### 1.0.5: 2024-06-23
 
 * Force the text fill for number inputs as white instead of using a variable, Finally fixes #5
