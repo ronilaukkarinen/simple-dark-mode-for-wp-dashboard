@@ -1,3 +1,7 @@
+### 1.0.5: 2024-06-23
+
+* Force the text fill for number inputs as white instead of using a variable, Finally fixes #5
+
 ### 1.0.4: 2024-06-23
 
 * Fix text fill color
