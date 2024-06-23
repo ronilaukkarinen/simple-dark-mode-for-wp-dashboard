@@ -1,6 +1,6 @@
 {
   "name": "simple-dark-mode-for-wp-dashboard",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "The simplest way to make your WordPress Dashboard dark. No settings, just activate the plugin and enjoy the darkness. Tries to follow the WordPress Coding Standards and best practices and be as straightforward as possible.",
   "author": "Roni Laukkarinen (roni@dude.fi)",
   "devDependencies": {

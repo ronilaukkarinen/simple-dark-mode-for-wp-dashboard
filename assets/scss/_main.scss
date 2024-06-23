@@ -1826,3 +1826,9 @@ textarea.readonly,
 textarea[readonly] {
   background-color: var(--color-dark-grey);
 }
+
+/* stylelint-disable-next-line */
+body .block-editor-publish-date-time-picker .components-input-control__container .components-input-control__backdrop {
+  /* stylelint-disable-next-line */
+  background: unset !important;
+}
