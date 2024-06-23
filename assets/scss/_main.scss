@@ -1574,6 +1574,11 @@ body.wp-admin:not(.gutenberg-editor-page) {
     background-color: var(--color-dark-grey);
   }
 
+  // Autocomplete inputs
+  input[type="number"] {
+    -webkit-text-fill-color: var(--color-white);
+  }
+
   .button,
   .button-secondary,
   &.wp-core-ui .button,
