@@ -21,6 +21,9 @@ define( 'SIMPLE_DARK_MODE_DASHBOARD_PLUGIN_PATH', plugin_dir_url( __FILE__ ) );
 
 // Add styles to admin
 function simple_dark_mode() {
+  // Dequeue plugin styles if needed
+  wp_dequeue_style( 'activitypub-admin' );
+
   wp_enqueue_style(
     'dark-mode',
     SIMPLE_DARK_MODE_DASHBOARD_PLUGIN_PATH . '/assets/css/prod/dark-mode.css',

@@ -6,6 +6,8 @@
 .activitypub-settings-accordion-trigger,
 #activitypub-settings-accordion-block-friends-plugin,
 .activitypub-settings-accordion-heading,
+.activitypub-visibility *,
+body .css-bc6pwz,
 body.wp-admin.settings_page_activitypub #wpcontent .plugin-card-friends,
 body.wp-admin.settings_page_activitypub #wpcontent .box {
   /* stylelint-disable-next-line */
@@ -17,4 +19,9 @@ body.wp-admin.settings_page_activitypub #wpcontent .box {
 
 .activitypub-settings-accordion-heading {
   border-top: 1px solid var(--color-border-light) !important;
+}
+
+.activitypub-visibility svg,
+body.wp-admin .activitypub-visibility svg {
+  fill: var(--color-paragraph) !important;
 }

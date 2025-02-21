@@ -18,7 +18,7 @@ const {
 // Task
 function watchfiles() {
   bs.init(config.browsersync.src, config.browsersync.opts);
-  watch(config.styles.watch.development, series('devstyles', 'lintstyles')).on('error', handleError());
+  watch(config.styles.watch.development, series('devstyles')).on('error', handleError());
   watch(config.styles.watch.production, series('prodstyles')).on('error', handleError());
 };
 

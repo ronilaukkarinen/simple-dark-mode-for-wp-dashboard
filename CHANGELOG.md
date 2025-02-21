@@ -3,6 +3,8 @@
 * Add ActivityPub support
 * Ensure the plugin styles are loaded last
 * Add composer.json
+* Remove lintstyles task from gulp
+* Ignore css files in stylelint
 
 ### 1.0.7: 2024-06-23
 
