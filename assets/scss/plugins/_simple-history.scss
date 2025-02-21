@@ -17,3 +17,12 @@
     background-color: var(--color-border-light) !important;
   }
 }
+
+body.wp-admin #simple_history_dashboard_widget *,
+body.wp-admin #simple_history_dashboard_widget .postbox,
+body.wp-admin #simple_history_dashboard_widget div,
+body.wp-admin #simple_history_dashboard_widget div div {
+  background-color: var(--color-dark-grey) !important;
+  color: var(--color-paragraph) !important;
+  border-color: var(--color-border-light) !important;
+}
