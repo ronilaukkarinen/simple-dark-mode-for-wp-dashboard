@@ -387,6 +387,9 @@ body.wp-admin #wpwrap .acf-relationship .selection .choices,
 body.wp-admin #wpwrap .acf-relationship .list,
 body.wp-admin #wpwrap .components-dropdown button,
 body.wp-admin #wpwrap .components-dropdown *,
+body.wp-admin .block-editor-media-placeholder,
+body.wp-admin .wp-block .components-placeholder,
+body.wp-admin .wp-block .components-placeholder.block-editor-media-placeholder,
 body.wp-admin #wpwrap .block-editor-tools-panel-color-gradient-settings__item,
 #wpseo-metabox-root div div {
   background-color: var(--color-background-default) !important;

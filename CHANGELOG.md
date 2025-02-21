@@ -1,3 +1,7 @@
+### 1.0.9: 2025-02-21
+
+* Fix: Block styles not currently covered #1
+
 ### 1.0.8: 2025-02-21
 
 * Add ActivityPub support
