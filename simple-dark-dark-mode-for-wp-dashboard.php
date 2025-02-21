@@ -6,7 +6,7 @@
  * Author: Roni Laukkarinen
  * Author URI: https://github.com/ronilaukkarinen
  * Text Domain: dark-mode-dashboard
- * Version: 1.0.7
+ * Version: 1.0.8
  *
  * @package dark-mode-dashboard
  */
@@ -16,7 +16,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 // Define versions
-define( 'SIMPLE_DARK_MODE_DASHBOARD_VERSION', '1.0.7' );
+define( 'SIMPLE_DARK_MODE_DASHBOARD_VERSION', '1.0.8' );
 define( 'SIMPLE_DARK_MODE_DASHBOARD_PLUGIN_PATH', plugin_dir_url( __FILE__ ) );
 
 // Add styles to admin
@@ -28,7 +28,7 @@ function simple_dark_mode() {
     filemtime( SIMPLE_DARK_MODE_DASHBOARD_PLUGIN_PATH . '/assets/css/prod/dark-mode.css' )
   );
 }
-add_action( 'admin_enqueue_scripts', 'simple_dark_mode' );
+add_action( 'admin_enqueue_scripts', 'simple_dark_mode', 99999 );
 
 // Plugin description when people click on View version details
 add_filter( 'plugins_api', 'dark_mode_dashboard_plugin_view_version_details', 9999, 3 );

@@ -1,3 +1,9 @@
+### 1.0.8: 2025-02-21
+
+* Add ActivityPub support
+* Ensure the plugin styles are loaded last
+* Add composer.json
+
 ### 1.0.7: 2024-06-23
 
 * Unset backdrop background required by #5

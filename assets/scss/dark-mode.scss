@@ -2,8 +2,11 @@
 @import 'variables';
 @import 'admin';
 @import 'main';
+@import 'acf';
+@import 'gutenberg';
+
+// Plugins
 @import 'plugins/yoast-seo';
 @import 'plugins/simple-history';
 @import 'plugins/koko-analytics';
-@import 'acf';
-@import 'gutenberg';
+@import 'plugins/activitypub';
