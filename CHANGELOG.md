@@ -6,6 +6,7 @@
 * Remove lintstyles task from gulp
 * Ignore css files in stylelint
 * Fixes to Simple History dashboard widget
+* Improvements for Yoast SEO
 
 ### 1.0.7: 2024-06-23
 
