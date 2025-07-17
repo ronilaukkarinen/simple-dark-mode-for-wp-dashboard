@@ -18,6 +18,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 // Define versions
 define( 'SIMPLE_DARK_MODE_DASHBOARD_VERSION', '1.0.9' );
 define( 'SIMPLE_DARK_MODE_DASHBOARD_PLUGIN_PATH', plugin_dir_url( __FILE__ ) );
+define( 'SIMPLE_DARK_MODE_DASHBOARD_PLUGIN_DIR', plugin_dir_path( __FILE__ ) );
 
 // Add styles to admin
 function simple_dark_mode() {
@@ -28,7 +29,7 @@ function simple_dark_mode() {
     'dark-mode',
     SIMPLE_DARK_MODE_DASHBOARD_PLUGIN_PATH . '/assets/css/prod/dark-mode.css',
     [],
-    filemtime( SIMPLE_DARK_MODE_DASHBOARD_PLUGIN_PATH . '/assets/css/prod/dark-mode.css' )
+    filemtime( SIMPLE_DARK_MODE_DASHBOARD_PLUGIN_DIR . '/assets/css/prod/dark-mode.css' )
   );
 }
 add_action( 'admin_enqueue_scripts', 'simple_dark_mode', 99999 );
